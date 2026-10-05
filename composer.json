@@ -1,0 +1,50 @@
+{
+    "name": "tyhpdef/slevomat-coding-standard-impl",
+    "description": "Implementation package for tyhpdef/slevomat-coding-standard. Require tyhpdef/slevomat-coding-standard, not this package.",
+    "keywords": [
+        "dev",
+        "static analysis",
+        "internal"
+    ],
+    "type": "library",
+    "license": "Apache-2.0",
+    "version": "8.31.1.0",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "tyhp": {
+            "interopContractVersion": 1,
+            "php-version": ">=8.2",
+            "require": {
+                "tyhpdef/php": "@dev",
+                "tyhpdef/squizlabs-php_codesniffer": "@dev",
+                "tyhpdef/phpstan-phpdoc-parser": "@dev"
+            },
+            "package": {
+                "include": [
+                    "./_tyhpdef/*.tyhpdef",
+                    "./_tyhpdef/extensions/*.tyhpdef"
+                ],
+                "overlay": [
+                    "./_tyhpdef/overlays/stubs/*.tyhpdef",
+                    "./_tyhpdef/overlays/*.tyhpdef"
+                ]
+            },
+            "public": "tyhpdef/slevomat-coding-standard"
+        }
+    },
+    "require": {
+        "php": ">=8.2",
+        "slevomat/coding-standard": "8.31.1"
+    },
+    "require-dev": {
+        "tyhpdef/php": "@dev",
+        "tyhpdef/squizlabs-php_codesniffer": "@dev",
+        "tyhpdef/phpstan-phpdoc-parser": "@dev"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}
